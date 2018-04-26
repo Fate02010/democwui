@@ -1,6 +1,6 @@
 /**
  * Created by maijinchao on 2018/4/25.
- * 基础请求封装,负责通用的请求.
+ * 基础请求封装,负责通用的请求
  */
 
 import axios from 'axios'
