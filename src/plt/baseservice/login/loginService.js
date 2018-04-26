@@ -11,7 +11,6 @@ import baseRequest from '../baseRequest'
  * @returns {AxiosPromise} 成功返回就是token
  */
 export function login(username,password) {
-  debugger
   const data = {
     username,
     password

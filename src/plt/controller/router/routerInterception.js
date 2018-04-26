@@ -16,11 +16,7 @@ router.beforeEach((to, from, next) => {
   //进度条
   //NProgress.start();
   //判断是否有token
-  debugger;
-  let token = getToken();
-  console.log(getToken())
   if(getToken()){
-    debugger;
       if(to.path === 'login'){
         // 首页
         next({path: '/home'});

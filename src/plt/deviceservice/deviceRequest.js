@@ -4,6 +4,7 @@
 import requireConfig from '../../config/addressconfig/requestConfig'
 import axios from 'axios'
 import { getToken } from '../security/cookies/tokenUtils'
+import { logEventUtils } from '../baseservice/log/logUtils'
 
 // 创建 axios 实例
 const  deviceRequest = axios.create({
@@ -22,9 +23,7 @@ deviceRequest.interceptors.request.use(config => {
 deviceRequest.interceptors.response.use(function (response) {
   return response;
 },function (error) {
-  debugger;
-  console.log(error.response.data.message);
-  console.log(error.response.data.error);
+  logEventUtils(error);
   return Promise.reject(error);
 })
 

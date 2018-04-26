@@ -11,9 +11,12 @@ import logRequest from './logRequest'
  * @returns {AxiosPromise} 返回信息
  */
 export function logEvent(msg) {
+  const data = {
+    info:msg
+  }
   return logRequest({
     url: '/api/log/logEvent',
     method: 'post',
-    data: msg
+    data
   });
 }
